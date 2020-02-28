@@ -8,11 +8,11 @@ let timeoutId;
 let elapsedTime = 0;
 
 function countUp() {
-  const d = new Date(Date.now() - startTime + elapsedTime);
-  const m = String(d.getMinutes()).padStart(2, '0');
-  const s = String(d.getSeconds()).padStart(2, '0');
-  const ms = String(d.getMilliseconds()).padStart(3, '0');
-  timer.textContent = `${m}:${s}.${ms}`;
+  const day = new Date(Date.now() - startTime + elapsedTime);
+  const minutes = String(day.getMinutes()).padStart(2, '0');
+  const second = String(day.getSeconds()).padStart(2, '0');
+  const milliSeconds = String(day.getMilliseconds()).padStart(3, '0');
+  timer.textContent = `${minutes}:${second}.${milliSeconds}`;
 
   timeoutId = setTimeout(() => {
     countUp();
