@@ -2,8 +2,11 @@
 class Panel {
   // コンストラクタ
   constructor() {
+
+    //sectionの作成
     const section = document.createElement('section');
-    //パネルクラスの追加
+
+    //sectionにパネルクラスの追加
     section.classList.add('panel');
 
     //イメージの挿入
@@ -12,7 +15,7 @@ class Panel {
 
     this.timeoutId = undefined;
 
-    //STOPボタン関連の処理
+    //stopの作成
     this.stop = document.createElement('div');
     this.stop.textContent = 'STOP';
 
@@ -28,10 +31,10 @@ class Panel {
       //ボタンが押されるとinactiveにする
       this.stop.classList.add('inactive');
 
-      //ローテーションを止める
+      //spin関連の処理
       clearTimeout(this.timeoutId);
 
-      //動いているパネルの数
+      //動いているパネルの数を減らす
       panelsLeft--;
 
       //すべてが止まった場合の処理
@@ -42,6 +45,7 @@ class Panel {
       }
     });
 
+    //画面に要素が表示されるようにする処理
     //sectionに２つの子要素を追加する
     section.appendChild(this.img);
     section.appendChild(this.stop);
