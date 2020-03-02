@@ -11,6 +11,7 @@ class Panel {
     this.timeoutId = setTimeout(() => {
       this.content = Math.floor(Math.random() * 3) + 1;
     }, 100);
+    spin();
   }
 }
 
