@@ -14,13 +14,15 @@ body {
   margin: 5% auto;
   text-align: center;
   height: 70%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
 }
 
 #content {
   width: 25%;
   height: 100px;
   float: left;
-  margin: 30px 21px;
   border: 1px solid grey;
   border-radius: 5px;
   background-color: white;

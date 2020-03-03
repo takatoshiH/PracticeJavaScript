@@ -1,17 +1,19 @@
 class Panel {
   constructor() {
-    const content = document.createElement("div");
-    content.setAttribute("id", "content");
-    content.textContent = Math.floor(Math.random() * 3) + 1;
-    document.getElementById("slot").appendChild(content);
+    this.content = document.createElement("div");
+    this.content.setAttribute("id", "content");
+    this.content.textContent = Math.floor(Math.random() * 3) + 1;
+    document.getElementById("slot").appendChild(this.content);
+
+    this.timeoutId = undefined;
   }
 
-  timeoutId = null;
   spin() {
     this.timeoutId = setTimeout(() => {
-      this.content = Math.floor(Math.random() * 3) + 1;
+      this.content.textContent = Math.floor(Math.random() * 3) + 1;
+      console.log("good");
+      this.spin();
     }, 100);
-    spin();
   }
 }
 
