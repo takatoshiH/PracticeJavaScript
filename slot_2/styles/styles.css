@@ -46,7 +46,7 @@ body {
   color: white;
   line-height: 45px;
   font-weight: bold;
-  box-shadow: 3px 3px 0 darkslateblue;
+  box-shadow: 3px 3px 4px darkslateblue;
   cursor: pointer;
 }
 
