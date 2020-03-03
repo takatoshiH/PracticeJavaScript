@@ -13,7 +13,7 @@ body {
 #slot {
   margin: 5% auto;
   text-align: center;
-  height: 70%;
+  height: 50%;
   display: flex;
   justify-content: space-between;
   padding: 20px;
